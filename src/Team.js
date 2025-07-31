@@ -270,7 +270,7 @@ export default function TeamPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button className="group bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-500 transform hover:scale-105 flex items-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-                <Shield className="w-6 h-6 mr-3 relative z-10" />
+                <img src={iconShield} className="w-[24px] text-white mr-[12px]" />
                 <span className="relative z-10">Get Spoiler Shield</span>
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
               </button>
