@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Users, Code, Lightbulb, Github, Twitter, Linkedin, Mail, ArrowRight, Sparkles, Heart, Globe, Award, Coffee, Zap } from 'lucide-react';
+import Footer from './Footer';
 import iconShield from './icons/icon-shield.png'
 
 
@@ -26,22 +27,18 @@ export default function TeamPage() {
   const teamMembers = [
     {
       name: "You",
-      role: "Founder & CEO",
-      description: "Visionary leader passionate about protecting the joy of discovery in our digital age. Built Spoiler Shield from a personal need to browse spoiler-free.",
+      role: "Founder",
       avatar: "YF",
       bgColor: "from-violet-500 to-purple-500",
-      skills: ["Product Vision", "Strategy", "User Experience", "Leadership"],
       social: {
         twitter: "#",
         linkedin: "#",
         github: "#"
       },
-      quote: "Every spoiler blocked is a moment of joy preserved."
     },
     {
       name: "Mike M.",
       role: "Full Stack Developer",
-      description: "Brilliant engineer who transforms complex ideas into elegant code. The technical mastermind behind our AI-powered spoiler detection system.",
       avatar: "MM",
       bgColor: "from-emerald-500 to-teal-500",
       skills: ["React", "Node.js", "AI/ML", "Browser Extensions"],
@@ -50,7 +47,6 @@ export default function TeamPage() {
         linkedin: "#",
         github: "#"
       },
-      quote: "Great code is invisible - users should never think about the tech, just enjoy the experience."
     }
   ];
 
@@ -211,30 +207,6 @@ export default function TeamPage() {
                       </div>
                     </div>
 
-                    {/* Description */}
-                    <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                      {member.description}
-                    </p>
-
-                    {/* Quote */}
-                    <div className="bg-white/5 rounded-2xl p-6 mb-8 border-l-4 border-gradient-to-b from-violet-500 to-purple-500">
-                      <p className="text-gray-300 italic text-lg">
-                        "{member.quote}"
-                      </p>
-                    </div>
-
-                    {/* Skills */}
-                    <div className="mb-8">
-                      <h4 className="text-white font-semibold mb-4 text-lg">Expertise</h4>
-                      <div className="flex flex-wrap gap-3">
-                        {member.skills.map((skill, skillIndex) => (
-                          <span key={skillIndex} className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${member.bgColor} text-white hover:scale-105 transition-transform duration-300`}>
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
                     {/* Social Links */}
                     <div className="flex space-x-4">
                       <a href={member.social.twitter} className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 group/social">
@@ -284,50 +256,7 @@ export default function TeamPage() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-white/10 py-16 px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-12">
-              <div className="md:col-span-2">
-                <div className="flex items-center space-x-3 mb-6">
-                   <img src={iconShield} className="w-[24px] text-white" />
-                  <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                    Spoiler Shield
-                  </span>
-                </div>
-                <p className="text-gray-400 mb-8 max-w-md text-lg leading-relaxed">
-                  The ultimate browser extension for spoiler-free browsing across all your favorite platforms.
-                </p>
-              </div>
-              
-              <div>
-                <h4 className="font-bold text-white mb-6 text-lg">Product</h4>
-                <ul className="space-y-4 text-gray-400">
-                  <li><a href="#" className="hover:text-white transition-colors text-lg">Features</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors text-lg">How It Works</a></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-bold text-white mb-6 text-lg">Company</h4>
-                <ul className="space-y-4 text-gray-400">
-                  <li><a href="#" className="hover:text-white transition-colors text-lg">About</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors text-lg">Team</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors text-lg">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-lg">
-                © 2025 Spoiler Shield. All rights reserved.
-              </p>
-              <div className="flex space-x-8 mt-6 md:mt-0">
-                <a href="#" className="text-gray-400 hover:text-white text-lg transition-colors">Privacy Policy</a>
-                <a href="#" className="text-gray-400 hover:text-white text-lg transition-colors">Terms of Service</a>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
