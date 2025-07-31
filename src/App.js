@@ -1,7 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 import { Shield, Download, Star, Check, Play, Menu, X, Chrome, Globe, Eye, EyeOff, Zap, Users, Lock, ArrowRight, Sparkles, Heart, AlertTriangle } from 'lucide-react';
 import iconShield from './icons/icon-shield.png'
 
+// Firefox icon component since it's not in lucide-react
+const Firefox = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.5 12c0 1.657-.672 3.157-1.757 4.243S14.157 17.5 12.5 17.5 9.343 16.828 8.257 15.743 6.5 13.657 6.5 12s.672-3.157 1.757-4.243S10.343 6.5 12 6.5s3.157.672 4.243 1.757S18.5 10.343 18.5 12z"/>
+  </svg>
+);
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -142,11 +149,18 @@ export default function App() {
                   Reviews
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-purple-500 group-hover:w-full transition-all duration-300"></div>
                 </a>
-                <button className="group bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white px-8 py-3 rounded-2xl hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center">
-                  <Chrome className="w-5 h-5 mr-2" />
-                  Add to Chrome
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                <div className="flex space-x-3">
+                  <button className="group bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white px-6 py-3 rounded-2xl hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center">
+                    <Chrome className="w-5 h-5 mr-2" />
+                    Chrome
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                  <button className="group bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-white px-6 py-3 rounded-2xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center">
+                    <Firefox className="w-5 h-5 mr-2" />
+                    Firefox
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </div>
               </div>
 
               <button 
@@ -165,10 +179,16 @@ export default function App() {
                 <a href="#features" className="block text-gray-300 hover:text-white transition-colors text-lg">Features</a>
                 <a href="#how-it-works" className="block text-gray-300 hover:text-white transition-colors text-lg">How It Works</a>
                 <a href="#testimonials" className="block text-gray-300 hover:text-white transition-colors text-lg">Reviews</a>
-                <button className="w-full bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white px-8 py-4 rounded-2xl font-semibold flex items-center justify-center">
-                  <Chrome className="w-5 h-5 mr-2" />
-                  Add to Chrome
-                </button>
+                <div className="space-y-3">
+                  <button className="w-full bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white px-8 py-4 rounded-2xl font-semibold flex items-center justify-center">
+                    <Chrome className="w-5 h-5 mr-2" />
+                    Add to Chrome
+                  </button>
+                  <button className="w-full bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-white px-8 py-4 rounded-2xl font-semibold flex items-center justify-center">
+                    <Firefox className="w-5 h-5 mr-2" />
+                    Add to Firefox
+                  </button>
+                </div>
               </div>
             </div>
           )}
@@ -201,16 +221,16 @@ export default function App() {
                 <button className="group bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white px-10 py-5 rounded-2xl text-xl font-bold hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-500 transform hover:scale-105 flex items-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
                   <Chrome className="w-6 h-6 mr-3 relative z-10" />
-                  <span className="relative z-10">Install Free Extension</span>
+                  <span className="relative z-10">Install for Chrome</span>
                   <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
                 </button>
                 
-                {/* <button className="group flex items-center text-gray-300 hover:text-white transition-all duration-300 text-lg font-medium">
-                  <div className="w-12 h-12 rounded-full border-2 border-gray-600 group-hover:border-white flex items-center justify-center mr-3 group-hover:scale-110 transition-all duration-300">
-                    <Play className="w-5 h-5 ml-0.5" />
-                  </div>
-                  Watch Demo
-                </button> */}
+                <button className="group bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-white px-10 py-5 rounded-2xl text-xl font-bold hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-500 transform hover:scale-105 flex items-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+                  <Firefox className="w-6 h-6 mr-3 relative z-10" />
+                  <span className="relative z-10">Install for Firefox</span>
+                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
+                </button>
               </div>
 
               {/* Stats with animations */}
@@ -290,7 +310,7 @@ export default function App() {
                   <Sparkles className="absolute -top-2 -right-2 w-6 h-6 text-violet-400 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Install Extension</h3>
-                <p className="text-gray-300 text-lg leading-relaxed">One-click installation from the Chrome Web Store. Takes literally 3 seconds.</p>
+                <p className="text-gray-300 text-lg leading-relaxed">One-click installation from Chrome Web Store or Firefox Add-ons. Takes literally 3 seconds.</p>
               </div>
 
               <div className="text-center group md:mt-12">
@@ -372,12 +392,21 @@ export default function App() {
               Join 50,000+ users who browse the web spoiler-free every single day
             </p>
             
-            <button className="group bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-500 transform hover:scale-105 flex items-center mx-auto relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-              <Chrome className="w-6 h-6 mr-3 relative z-10" />
-              <span className="relative z-10">Install Spoiler Shield Free</span>
-              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
-            </button>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <button className="group bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-500 transform hover:scale-105 flex items-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+                <Chrome className="w-6 h-6 mr-3 relative z-10" />
+                <span className="relative z-10">Install for Chrome</span>
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
+              </button>
+
+              <button className="group bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-white px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-500 transform hover:scale-105 flex items-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+                <Firefox className="w-6 h-6 mr-3 relative z-10" />
+                <span className="relative z-10">Install for Firefox</span>
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
+              </button>
+            </div>
 
             <p className="text-gray-400 mt-8 text-lg">
               Free forever • No account required • Privacy-first design
