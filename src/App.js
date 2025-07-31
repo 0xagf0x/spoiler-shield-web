@@ -407,10 +407,6 @@ export default function App() {
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
               </button>
             </div>
-
-            <p className="text-gray-400 mt-8 text-lg">
-              Free forever • No account required • Privacy-first design
-            </p>
           </div>
         </section>
 
