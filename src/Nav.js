@@ -1,23 +1,9 @@
 import React, { useState, useEffect } from "react";
 import {
-  Shield,
-  Download,
-  Star,
-  Check,
-  Play,
   Menu,
   X,
   Chrome,
-  Globe,
-  Eye,
-  EyeOff,
-  Zap,
-  Users,
-  Lock,
   ArrowRight,
-  Sparkles,
-  Heart,
-  AlertTriangle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import iconShield from "./icons/icon-shield.png";
