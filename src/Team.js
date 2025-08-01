@@ -42,26 +42,26 @@ export default function TeamPage() {
 
   const teamMembers = [
     {
-      name: "You",
+      name: "Charles Buckley",
       role: "Founder",
       avatar: "YF",
       bgColor: "from-violet-500 to-purple-500",
       social: {
-        twitter: "#",
-        linkedin: "#",
-        github: "#",
+        linkedin: "https://www.linkedin.com/in/charles-buckley-20447950/",
+        github: "https://github.com/0xagf0x",
+        twitter: "https://x.com/0xagf0x",
       },
     },
     {
-      name: "Mike M.",
+      name: "Mike Innella.",
       role: "Full Stack Developer",
       avatar: "MM",
       bgColor: "from-emerald-500 to-teal-500",
-      skills: ["React", "Node.js", "AI/ML", "Browser Extensions"],
+    //   skills: ["React", "Tailwind", "Browser Extensions"],
       social: {
-        twitter: "#",
         linkedin: "#",
-        github: "#",
+        github: "https://github.com/Mike-Innella",
+        twitter: "#",
       },
     },
   ];
