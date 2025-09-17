@@ -44,7 +44,7 @@ export default function TeamPage() {
     {
       name: "Charles Buckley",
       role: "Founder",
-      avatar: "YF",
+      avatar: "CB",
       bgColor: "from-violet-500 to-purple-500",
       social: {
         linkedin: "https://www.linkedin.com/in/charles-buckley-20447950/",
@@ -54,8 +54,8 @@ export default function TeamPage() {
     },
     {
       name: "Mike Innella.",
-      role: "Full Stack Developer",
-      avatar: "MM",
+      role: "Web/Mobile Engineer",
+      avatar: "MI",
       bgColor: "from-emerald-500 to-teal-500",
     //   skills: ["React", "Tailwind", "Browser Extensions"],
       social: {
